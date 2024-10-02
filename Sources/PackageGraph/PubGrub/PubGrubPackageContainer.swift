@@ -86,7 +86,7 @@ internal final class PubGrubPackageContainer {
         }
 
         // Return the highest version that is allowed by the input requirement.
-        return try self.underlying.versionsDescending().first { versionSet.contains($0) }
+        return try self.underlying.versionsAscending().first { versionSet.contains($0) }
     }
 
     /// Compute the bounds of incompatible tools version starting from the given version.
